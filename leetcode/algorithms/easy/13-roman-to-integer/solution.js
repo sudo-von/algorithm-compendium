@@ -12,11 +12,11 @@ const numerals = {
  * @param {string} s
  * @return {number}
  */
-var romanToInt = function(s) {
+var romanToInt = function (s) {
     let result = 0;
     for (let i = 0; i < s.length; i++) {
         const current = numerals[s[i]];
-        const next = numerals[s[i+1]] ?? 0;
+        const next = numerals[s[i + 1]] ?? 0;
         if (current < next) {
             result += next - current;
             i++;
